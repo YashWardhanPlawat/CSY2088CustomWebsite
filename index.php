@@ -11,7 +11,7 @@
     //this changes the name of the tab to this current file's name
 
     //---Website stuff---//
-
+    $Content = loadHeader('');
     //-------------------//
 
     phpinfo();
