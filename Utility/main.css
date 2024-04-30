@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.headDark{
+    background-color: darkblue;
+    width: 100vw;
+    height: 3vh;
+}
+
+.iconWords{
+    display: fixed;
+    right: 0;
+    color: #bebebe;
+}
+
+.headlight{
+    background-color: blue;
+    width: 100vw;
+    height: 6vh;
+}
+.logo{
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+    width: 7vw;
+    height: 5vh;
+}
+.foot {
+    background-color: darkgray;
+    width: 100vw;
+    height: 20vh;
+}

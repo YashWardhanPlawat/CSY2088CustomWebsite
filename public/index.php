@@ -1,5 +1,5 @@
 <?php
-    require "Functions.php";
+    require "../Utility/Functions.php";
     //inport any function library/files
 
     if (session_status() != 2){
