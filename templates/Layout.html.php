@@ -22,5 +22,16 @@
             <img class="logo" src="C:\Users\Adam Collett\Pictures\LOGO_plaseholed.png" alt="">
         </div>
     </header>
+    <body>
+        <?=$Content?>
+    </body>
+    <footer>
+      <div>Colorlib</div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero. Sed cursus ante dapibus diam.
+      </div>
+      <!-- Placeholder for footer content -->
+    </footer>
 </body>
 </html>

@@ -10,7 +10,7 @@
 
 .iconWords{
     display: fixed;
-    right: 0;
+    float: right;
     color: #bebebe;
 }
 
@@ -32,3 +32,82 @@
     width: 100vw;
     height: 20vh;
 }
+
+/*made by faheem*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    height: 30px;
+  }
+  .logo {
+    padding: 10px 10px;
+    float: left;
+  }
+  .header-right {
+    float: right;
+    padding: 10px 10px;
+  }
+  .header-right a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .product-row {
+    overflow: hidden;
+  }
+  .product {
+    float: left;
+    width: 21%; /* Adjust the width as per requirement */
+    margin: 1%;
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .product img {
+    width: 80%;
+    height: auto;
+  }
+  .category {
+    clear: both;
+    overflow: auto;
+  }
+  .category h2 {
+    border-bottom: 2px solid blue;
+    padding-bottom: 5px;
+  }
+  .category-image {
+    float: left;
+    width: 21%; /* Adjust the width as per requirement */
+    margin: 1%;
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .category-image img {
+    width: 100%;
+    height: auto;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  /*---*/
