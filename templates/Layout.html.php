@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Utility/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
 </head>
 <body>
     <header>
@@ -20,6 +20,14 @@
         </div>
         <div class="headlight">
             <img class="logo" src="C:\Users\Adam Collett\Pictures\LOGO_plaseholed.png" alt="">
+            <ul>
+                <li>
+                    <a href="">page1</a>
+                    <a href="">page2</a>
+                    <a href="">page3</a>
+                    <a href="">page4</a>
+                </li>
+            </ul>
         </div>
     </header>
     <body>

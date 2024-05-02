@@ -108,4 +108,11 @@ function loadHeader($headerFilePath){
 }
 //needed changes
 
+function testfunc(){
+    ob_start();
+    echo "<p>test test</p>";
+    $contents = ob_get_clean();
+    return $contents;
+}
+
 ?>
