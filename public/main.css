@@ -3,21 +3,34 @@
     padding: 0;
 }
 .headDark{
-    background-color: darkblue;
-    width: 100vw;
-    height: 3vh;
+  background-color: darkblue;
+  width: 100vw;
+  height: 3vh;
+
 }
 
+
 .iconWords{
-    display: fixed;
-    float: right;
-    color: #bebebe;
+  display: fixed;
+  justify-content: flex-end;
+  text-align: right;
+  color: #bebebe;
+  text-decoration: none;
 }
 
 .headlight{
     background-color: blue;
     width: 100vw;
     height: 6vh;
+}
+.headlight a {
+  color:black;
+  text-decoration: none;
+  display:fixed;
+  align-items: center;
+  justify-content: center;
+
+  
 }
 .logo{
     padding-top: 0.5vh;
@@ -60,26 +73,36 @@ body {
     padding: 10px 10px;
   }
   .container {
-    width: 80%;
+    width: 99%;
     margin: 20px auto;
+  }
+  h1{
+    display: fixed;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  p{
+    display: fixed;
+    justify-content: flex-end;
+    text-align: center;
   }
 
   .product-row {
     overflow: hidden;
   }
   .product {
-    float: left;
-    width: 21%; /* Adjust the width as per requirement */
+    width: 29.5%; 
     margin: 1%;
-    border: 1px solid #ddd; /* Light gray border */
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd; 
+    padding: 9px ;
+    float:left;
+   
   }
 
-  .product img {
-    width: 80%;
-    height: auto;
+  .image-size {
+    width: 100%;
+    object-fit: cover;
+    
   }
   .category {
     clear: both;

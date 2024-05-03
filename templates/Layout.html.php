@@ -11,10 +11,10 @@
         <div class="headDark">
             <ul class="iconWords">
                 <li class="iconWords">
-                    <a class="iconWords" href="">eee</a>
-                    <a class="iconWords" href="">eee</a>
-                    <a class="iconWords" href="">eee</a>
-                    <a class="iconWords" href="">eee</a>
+                    <a class="iconWords" href="">Help│</a>
+                    <a class="iconWords" href="">Sign in│</a>
+                    <a class="iconWords" href="">Sign up│</a>
+                    <a class="iconWords" href="">Become a freelancer</a>
                 </li>
             </ul>
         </div>
@@ -22,10 +22,10 @@
             <img class="logo" src="C:\Users\Adam Collett\Pictures\LOGO_plaseholed.png" alt="">
             <ul>
                 <li>
-                    <a href="">page1</a>
-                    <a href="">page2</a>
-                    <a href="">page3</a>
-                    <a href="">page4</a>
+                    <a href="">HomePage</a>
+                    <a href="">Product search</a>
+                    <a href="">Freelancer search</a>
+                   
                 </li>
             </ul>
         </div>
