@@ -134,3 +134,30 @@ body {
     width: 100%;
   }
   /*---*/
+
+/*Product Page design */
+.productContainer{
+  display: grid;
+  grid-template-columns:50%,50% ;
+  grid-template-rows: 40%, 60%;
+  grid-template-areas:
+  "mainImage mainImage"
+  "priceDesc imagesReview" 
+  ;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.mainImage{
+  grid-area: mainImage;
+width: 80%;
+}
+.priceDesc{
+  grid-area: priceDesc;
+}
+.imagesReviews{
+  grid-area: imagesReview;
+}
+.productDesc{
+  background-color: #bebebe;
+}
