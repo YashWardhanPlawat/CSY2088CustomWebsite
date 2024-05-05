@@ -55,7 +55,7 @@ body {
   header {
     background-color: #0000ff;
     color: white;
-    
+
     text-align: center;
   
   }
@@ -137,25 +137,32 @@ body {
 
 /*Product Page design */
 .productContainer{
-  display: grid;
+  /*display: grid;
   grid-template-columns:50%,50% ;
   grid-template-rows: 40%, 60%;
   grid-template-areas:
   "mainImage mainImage"
   "priceDesc imagesReview" 
-  ;
+  ;*/
   width: 80%;
   margin: 20px auto;
+  height: 80%;
 }
 
 .mainImage{
   grid-area: mainImage;
 width: 80%;
+height: 30%;
+background-color: #bebebe;
 }
 .priceDesc{
   grid-area: priceDesc;
+  justify-self: left;
+  width: 50%;
 }
 .imagesReviews{
+  justify-self: left;
+  width: 50%;
   grid-area: imagesReview;
 }
 .productDesc{

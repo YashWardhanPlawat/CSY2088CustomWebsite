@@ -2,7 +2,7 @@
 <div class = "productContainer">
 
 <div class="mainImage">
-    <img src="placeholder-1.png" alt="Placeholder Image" />
+    <img src="../corteiz_black.png" alt="Placeholder Image" />
 </div>
 
 
