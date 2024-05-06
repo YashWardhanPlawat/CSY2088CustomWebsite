@@ -2,6 +2,7 @@
 function setMysqlDatabase($server, $username, $password, $schema){
     return new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $password);
 }
+
 //needed changes
 
 function queryMysqlDatabase($DBK, $Query, $QueryData){
@@ -115,4 +116,12 @@ function testfunc(){
     return $contents;
 }
 
+
+// this gets product details from the databse
+function getProductDetails($server,$username,$password){
+    $pdo=setMysqlDatabase($server, $username, $password, 'csy2088');
+    $results=$pdo->query('SELECT Name, Price, Description, Provider FROM products');
+    return $results->fetchAll(PDO::FETCH_ASSOC);
+}
+$productDetails = getProductDetails('mysql', 'csy2088', 'csy2088');
 ?>

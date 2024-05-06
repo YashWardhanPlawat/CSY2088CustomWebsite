@@ -1,3 +1,5 @@
+<?php
+foreach ($productDetails as $product):
 <main>
 <div class = "productContainer">
 
@@ -8,14 +10,15 @@
 
 <div class="priceDesc">
 <div class ="price">
-    <p>$0000.00</p>
+    <p><?php echo '$'. $product['Price'];?></p>
 </div>
 <div class="productDesc">
-    <h3>Description</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus aut. Possimus eius veritatis laboriosam, fuga iusto quas molestiae architecto accusantium suscipit, sapiente dolores. Quisquam cumque eius atque voluptate a.</p>
+    <h3><?php echo $product['Name'];?></h3>
+    <p><?php echo $product['Description'];?></p>
 </div>
 <div class="moreinfo">
 <h4>More info</h4>
+<p><?php echo 'Provider' . $product['Provider'];?></p>
 </div>
 </div>
 
@@ -35,3 +38,4 @@
 
 </div>
 </main>
+endforeach;?>
