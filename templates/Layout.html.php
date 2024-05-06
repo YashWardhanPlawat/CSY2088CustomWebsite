@@ -18,8 +18,11 @@
                 </li>
             </ul>
         </div>
+        
+        <div class="logo">
+          <img src="../images/logo.png" alt="" />
+        </div>
         <div class="headlight">
-            <img class="logo" src="C:\Users\Adam Collett\Pictures\LOGO_plaseholed.png" alt="">
             <ul>
                 <li>
                     <a href="">HomePage</a>
