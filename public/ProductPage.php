@@ -11,9 +11,15 @@
     //this changes the name of the tab to this current file's name
 
     $pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
-    $productQuery = 'SELECT * FROM csy2088.products';
-    $productQuerydata = ['productCategoryID' => $_GET["productCategory"] ];
-    $productData = queryMysqlDatabase($pdo, $productQuery, $productQuerydata)->fetchAll(PDO::FETCH_ASSOC);
+    if (isset($_GET["searchFilterCategory"])){
+        $productQuery = 'SELECT * FROM csy2088.products WHERE Category = :Category';
+        $productQueryData = ['Category' => $_GET["searchFilterCategory"] ];
+        $productData = queryMysqlDatabase($pdo, $productQuery, $productQueryData)->fetchAll(PDO::FETCH_ASSOC);
+    }else{
+        $productQuery = 'SELECT * FROM csy2088.products';
+        $productData = queryMysqlDatabase($pdo, $productQuery, null)->fetchAll(PDO::FETCH_ASSOC);
+    }
+   
 
     require "../templates/nonMain/Head.html.php";
     require "../templates/nonMain/Header.html.php";
