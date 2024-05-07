@@ -1,5 +1,5 @@
 <?php
-foreach ($productDetails as $product):
+foreach ($productDetails as $product):?>
 <main>
 <div class = "productContainer">
 
@@ -38,4 +38,4 @@ foreach ($productDetails as $product):
 
 </div>
 </main>
-endforeach;?>
+<?php endforeach;?>

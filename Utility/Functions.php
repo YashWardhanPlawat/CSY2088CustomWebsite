@@ -119,9 +119,9 @@ function testfunc(){
 
 // this gets product details from the databse
 function getProductDetails($server,$username,$password){
-    $pdo=setMysqlDatabase($server, $username, $password, 'csy2088');
+    $pdo=setMysqlDatabase('localhost', 'csy2088', 'csy2088' ,'csy2088');
     $results=$pdo->query('SELECT Name, Price, Description, Provider FROM products');
     return $results->fetchAll(PDO::FETCH_ASSOC);
 }
-$productDetails = getProductDetails('mysql', 'csy2088', 'csy2088');
+$productDetails = getProductDetails('localhost', 'csy2088', 'csy2088');
 ?>
