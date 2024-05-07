@@ -1,5 +1,4 @@
 <main>
-    <!-- made by faheem -->
     <div class="container">
       <h1>Capitano d'italia</h1>
       <p>Lusso su Misura (Luxury made to measure)</p>
