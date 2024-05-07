@@ -1,6 +1,5 @@
 <?php
-function setMysqlDatabase($server, $username, $password, $schema){
-    //return new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $password);
+function setMysqlDatabase($username, $password, $schema){
     return new PDO('mysql:dbname=' . $schema . ';host=mysql', $username, $password);
 }
 
