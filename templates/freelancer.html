@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
+      header {
+        background-color: #0000ff;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        height: 30px;
+      }
+      .work-entry {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.work-entry:last-child {
+  border-bottom: none;
+}
+
+.work-entry h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+.work-entry p {
+  margin: 4px 0;
+}
+
+      .logo {
+        padding: 10px 10px;
+        float: left;
+      }
+      .header-right {
+        float: right;
+        padding: 10px 10px;
+      }
+      .header-right a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 10px;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+      }
+      .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .availability {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+      }
+      .availability li {
+        padding: 5px 10px;
+        border: 1px solid green;
+        margin-right: 5px;
+      }
+      .section {
+        border-top: 2px solid #ccc;
+        padding-top: 20px;
+        margin-top: 20px;
+      }
+      .section h2 {
+        color: #333;
+      }
+      .work-history,
+      .comments,
+      .info {
+        margin-top: 10px;
+      }
+      .comment {
+        background: #e2e2e2;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <div class="header-right">
+        <a href="#">Help</a>
+        <a href="#">Sign in</a>
+        <a href="#">Sign up</a>
+        <a href="#">Become a freelancer</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="profile-header">
+        <h1>Jhon</h1>
+        <div>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <div>📞 (000) 244-199127</div>
+      </div>
+
+      <div class="specialization">
+        <h2>Specialisation</h2>
+        <p>Man Fashion Advisor</p>
+      </div>
+
+      <div class="availability section">
+        <h2>Availability</h2>
+        <ul>
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+        </ul>
+        <ul>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+      </div>
+
+      <div class="work-history section">
+        <h2>Work History</h2>
+        
+        <!-- Example Entry #1 -->
+        <div class="work-entry">
+          <h3>Senior Fashion Advisor</h3>
+          <p><strong>Company:</strong> Trendsetters Inc.</p>
+          <p><strong>Duration:</strong> January 2018 - Present</p>
+          <p><strong>Description:</strong> Leading a team of junior fashion advisors, overseeing the seasonal campaign designs, and maintaining client relationships with high-profile industry leaders.</p>
+        </div>
+      
+        <!-- Example Entry #2 -->
+        <div class="work-entry">
+          <h3>Fashion Consultant</h3>
+          <p><strong>Company:</strong> StyleSavvy Boutique</p>
+          <p><strong>Duration:</strong> October 2015 - December 2017</p>
+          <p><strong>Description:</strong> Provided tailored fashion advice to boutique customers, managed inventory levels, and organized monthly fashion events to drive sales and brand visibility.</p>
+        </div>
+      
+        <!-- Example Entry #3 -->
+        <div class="work-entry">
+          <h3>Junior Stylist</h3>
+          <p><strong>Company:</strong> Glamour & Gowns</p>
+          <p><strong>Duration:</strong> June 2013 - September 2015</p>
+          <p><strong>Description:</strong> Assisted lead stylists in preparing outfits for fashion shows, conducted market research on upcoming fashion trends, and contributed to the creative process in campaign development.</p>
+        </div>
+      </div>
+      
+
+      <div class="info section">
+        <h2>Information</h2>
+        <p>
+          Detailed information about the freelancer's skills, experiences, and
+          other relevant details.
+        </p>
+      </div>
+
+      <div class="comments section">
+        <h2>Comment Section</h2>
+        <!-- Existing comments -->
+        
+      
+        <!-- Add a form for new comments -->
+        <form action="#" method="POST"> <!-- Update the action attribute to your server endpoint -->
+          <label for="comment">Add your comment:</label> <br>
+          <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Type your comment here..."></textarea> <br>
+          <button type="submit">Submit Comment</button>
+        </form>
+      </div>
+      
+
+    <footer>
+      <div>Colorlib</div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero. Sed cursus ante dapibus diam.
+      </div>
+      <!-- Placeholder for footer content -->
+    </footer>
+  </body>
+</html>
