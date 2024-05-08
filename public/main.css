@@ -168,10 +168,6 @@ body {
   background-color: #bebebe;
   border: 3px solid blue ;
   padding: 20px;
-  /*padding-left: 300px;
-  padding-bottom: 30px;
-  padding-top: 40px;
-  padding-right: 300px;*/
   display: grid;
   grid-column: 1/3;
   margin: 3% auto;
@@ -181,12 +177,15 @@ body {
 .mainImage img{
   text-align: center;
   float: left;
+  border: 1px solid blue ;
 
 }
 .priceDesc{
   grid-area: priceDesc;
-  /*justify-self: left;*/
-  width: 50%;
+  width: 100%;
+}
+.price p{
+  text-align: left;
 }
 .imagesReviews {
   grid-area: imagesReview;
