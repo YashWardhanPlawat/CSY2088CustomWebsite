@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+
+</head>
+<header>
+    <div class="headDark">
+        <ul class="iconWords">
+            <li class="iconWords">
+                <a class="iconWords" href="">Help│</a>
+                <a class="iconWords" href="">Sign in│</a>
+                <a class="iconWords" href="">Sign up│</a>
+                <a class="iconWords" href="">Become a freelancer</a>
+            </li>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="../images/logo.png" alt="" />
+    </div>
+    <div class="headlight">
+        <ul>
+            <li>
+                <a href="">HomePage</a>
+                <a href="../productPage.php">Product search</a>
+                <a href="">Freelancer search</a>       
+            </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <div class="dropdown">
+            <div class="dropbtn-container">
+              <input class="dropbtn" type="text" readonly placeholder="Login as?">
+              <div class="arrow-down"></div>
+            </div>
+            <div class="dropdown-content">
+              <a href="#">Admin</a>
+              <a href="#">User</a>
+              <a href="#">freelancer</a>
+            </div>
+          </div>
+        
+        
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Username">
+            <div class="password-toggle">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="eye-icon" id="togglePassword">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </div>
+            </div>
+            
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            if (type === 'password') {
+                togglePassword.querySelector('i').classList.remove('fa-eye');
+                togglePassword.querySelector('i').classList.add('fa-eye-slash');
+            } else {
+                togglePassword.querySelector('i').classList.remove('fa-eye-slash');
+                togglePassword.querySelector('i').classList.add('fa-eye');
+            }
+        });
+    </script>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
