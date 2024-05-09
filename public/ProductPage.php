@@ -12,7 +12,7 @@
 
     $pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
     if (isset($_GET["searchFilterCategory"])){
-        $productQuery = 'SELECT * FROM csy2088.products WHERE Category = :Category';
+        $productQuery = 'SELECT * FROM products WHERE Category = :Category';
         $productQueryData = ['Category' => $_GET["searchFilterCategory"] ];
         $productData = queryMysqlDatabase($pdo, $productQuery, $productQueryData)->fetchAll(PDO::FETCH_ASSOC);
     }else{

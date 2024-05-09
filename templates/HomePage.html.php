@@ -6,33 +6,41 @@
 $products = showRandomProducts('csy2088', 'csy2088');
 if ($products!== null) {
     // Loop through the products
+    echo '<div class="product-row">';
     foreach ($products as $product) {
         // Generate the HTML for each product
         echo '<div class="product">';
         // Construct the image path based on the product ID or name
-        $imagePath = '../images/'. $product['Name']. '.jpg';
-        echo '<img src="'. $imagePath. '" alt="'. $product['name']. '" class="image-size" />';
+        //$imagePath = '../images/'. $product['Name']. '.png';
+        echo '<img src="../images/'.$product['Name']. '.png" '.' alt="'. $product['Name']. '" class="image-size" />';
         echo '</div>';
     }
+    echo '</div>';
 } else {
     // Handle the case where the query failed
     echo 'Failed to fetch products.';
 }
 
 $categories = showRandomCategories('csy2088','csy2088');
-if ($categories!== null){
-  foreach($categories as $category){
-    echo '<div class="category">';
-    echo '<h2> |'. $category['categories']. '| </h2>';
-    if (($product['category']==$category['categories'])&& ($imagePath==$product)){
-      echo '<a href=#><img src="'. $imagePath. '" alt="'. $product['name']. '" class="image-size" /></a>';
-    }
-    echo '</div>';
-  }
+$pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
+$productQuery = 'SELECT * FROM products WHERE Category = :Category';
+
+if ($categories != null){
+	foreach($categories as $category){ 
+	$productQueryData = ['Category' => $category['categories'] ];
+    $productData = queryMysqlDatabase($pdo, $productQuery, $productQueryData)->fetchAll(PDO::FETCH_ASSOC);?>
+	<div class="category">
+		<h2> | <?=$category['categories']?> |</h2>
+		<?php foreach($productData as $product){ ?>
+		<div class="category-image">
+			<a href="ProductPage.php?<?=$product['Name']?>"><img src="../images/<?=$product['Name']?>.png" alt="<?=$product['Name']?>" class="image-size"/></a>
+		</div>
+    <?php } ?>
+  	</div>
+	<?php }
 }
-
 ?>
-
+<!--
       <div class="category">
         <h2>│ Category │</h2>
         <div class="category-image2">
@@ -49,4 +57,5 @@ if ($categories!== null){
         </div>
       </div>
     </div>
+-->
 </main>
