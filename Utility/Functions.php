@@ -17,6 +17,36 @@ function showlast10Products($username, $password){
     return $fetchR;
 }
 
+function showRandomProducts($username, $password){
+    try {
+        // Attempt to establish a PDO connection
+        $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
+
+        // Prepare and execute the SQL query
+        $results = $pdo->prepare('SELECT * FROM products ORDER BY RAND() LIMIT 3');
+        $results->execute();
+
+        // Fetch all products
+        $products = $results->fetchAll(PDO::FETCH_ASSOC);
+
+        // Return the fetched products
+        return $products;
+    } catch (PDOException $e) {
+        // Handle any errors that occurred during the process
+        echo "Connection failed: ". $e->getMessage();
+        return null;
+    }
+}
+
+function showRandomCategories($username, $password){
+    $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
+    $results = $pdo->prepare('SELECT * FROM categories ORDER BY RAND() LIMIT 2');
+    $results->execute();
+    $categories = $results->fetchAll(PDO::FETCH_ASSOC);
+    return $categories;
+
+}
+
 function checkForAdminAcc($Name, $username, $password){
     $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
     $results = $pdo->prepare('SELECT * FROM admin_accounts WHERE Name = :name');
@@ -42,22 +72,22 @@ function userLockOut(){
     try{
         if(session_status() == 2){
         //this check if a session is active
-            if (isset($_SESSION['currentAccountName'])){
+            if (isset($_SESSION['currentAccount'])){
             //this check if currentAccountName is set eg a account has been log in to
-                if (!checkForAdminAcc($_SESSION['currentAccountName'], 'csy2088', 'csy2088')){
+                if (!checkForAdminAcc($_SESSION['currentAccount'], 'csy2088', 'csy2088')){
                     //this checks if the current SESSION username is not in the admin database if it isn't they have already log in
-                    header("Location: ../.php");
+                    header("Location: ../templates/AdminLogin.php");
                     //needs redirects to admin login page
                 }
             }else{
-                header("Location: ../.php");
+                header("Location: ../AdminLogin.php");
                 //needs redirects to admin login page
             }
         }else{
-            header("Location: ../index.php");
+            header("Location: ../Index.php");
         }
     }catch(exception $e){
-        header("Location: ../index.php");
+        header("Location: ../Index.php");
     }
 }
 
@@ -108,4 +138,5 @@ function getProductDetails(){
     $results=$pdo->query('SELECT * FROM csy2088.products');
     return $results->fetchAll(PDO::FETCH_ASSOC);
 }
+
 ?>
