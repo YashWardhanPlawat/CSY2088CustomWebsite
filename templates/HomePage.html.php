@@ -25,7 +25,10 @@ if ($categories!== null){
     echo '<div class="category">';
     echo '<h2> |'. $category['categories']. '| </h2>';
     if (($product['category']==$category['categories'])&& ($imagePath==$product)){
-      echo '<a href=#><img src="'. $imagePath. '" alt="'. $product['name']. '" class="image-size" /></a>';
+      echo '<a href= '$product[Name]' ><img src="'. $imagePath. '" alt="'. $product['name']. '" class="image-size" /></a>';
+    }
+    else{
+      echo'Failed to fetch products.';
     }
     echo '</div>';
   }
