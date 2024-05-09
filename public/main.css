@@ -149,31 +149,58 @@ body {
 .productContainer{
   display: grid;
   grid-template-columns:50%,50% ;
-  grid-template-rows: 40%, 60%;
+  grid-template-rows: 50%, 50%;
   grid-template-areas:
   "mainImage mainImage"
   "priceDesc imagesReview" 
   ;
-  width: 80%;
-  margin: 20px auto;
-  height: 80%;
+  width: 100%;
+  margin:1ch
+  
+
+  
 }
 
-.mainImage{
+.mainImage {
   grid-area: mainImage;
-width: 80%;
-height: 30%;
-background-color: #bebebe;
+  width: 50%;
+  height: 60%;
+  background-color: #bebebe;
+  border: 3px solid blue ;
+  padding: 20px;
+  /*padding-left: 300px;
+  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-right: 300px;*/
+  display: grid;
+  grid-column: 1/3;
+  margin: 3% auto;
+  justify-content: center;
+  
+}
+.mainImage img{
+  text-align: center;
+  float: left;
+
 }
 .priceDesc{
   grid-area: priceDesc;
   /*justify-self: left;*/
   width: 50%;
 }
-.imagesReviews{
-  /*justify-self: left;*/
-  width: 50%;
+.imagesReviews {
   grid-area: imagesReview;
+  padding: 5px;
+
+}
+.imagesReviews img{
+  grid-area: imagesReview;
+  margin: 1%;
+  border: 1px solid blue ; 
+  padding: 5px;
+  
+  
+
 }
 .productDesc{
   background-color: #bebebe;

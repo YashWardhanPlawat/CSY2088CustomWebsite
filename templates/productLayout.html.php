@@ -2,11 +2,11 @@
     <?php foreach ($productData as $product) { ?>
         <div class = "productContainer">
             <div class="mainImage">
-                <img src="../corteiz_black.png" alt="Placeholder Image" />
+                <img src="../images/placeholder-6.png" alt="Placeholder Image"  width = "300" height = "200"/>
             </div>
             <div class="priceDesc">
                 <div class ="price">
-                    <p>'$'<?=$product['Price']?></p>
+                    <p>£<?=$product['Price']?></p>
                 </div>
                 <div class="productDesc">
                     <h3><?=$product['Name']?></h3>
@@ -14,15 +14,16 @@
                 </div>
                 <div class="moreinfo">
                     <h4>More info</h4>
-                    <p>Provider<?=$product['Provider']?></p>
+                    <p>Provider: <?=$product['Provider']?></p>
                 </div>
             </div>
             <div class="imagesReviews">
                 <div class="extraImages">
-                    <img src="placeholder-1.png" alt="Placeholder Image" />
-                    <img src="placeholder-2.png" alt="Placeholder Image" />
-                    <img src="placeholder-3.png" alt="Placeholder Image" />
+                    <img src="../images/placeholder-6.png" alt="Placeholder Image"  width = "100" height = "100"/>
+                    <img src="../images/productpage2.png" alt="Placeholder Image"  width = "100" height = "100" />
+                    <img src="../images/productpage3.png" alt="Placeholder Image"   width = "100" height = "100"/>
                 </div>
+            </div>
                 <div class="stars"></div>
                 <div class="reviews">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere distinctio obcaecati ex id eaque nihil commodi quaerat accusantium laborum? </p>
