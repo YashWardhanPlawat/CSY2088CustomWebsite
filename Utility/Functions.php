@@ -23,7 +23,7 @@ function showRandomProducts($username, $password){
         $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
 
         // Prepare and execute the SQL query
-        $results = $pdo->prepare('SELECT * FROM Products ORDER BY RAND() LIMIT 3');
+        $results = $pdo->prepare('SELECT * FROM products ORDER BY RAND() LIMIT 3');
         $results->execute();
 
         // Fetch all products
@@ -40,7 +40,7 @@ function showRandomProducts($username, $password){
 
 function showRandomCategories($username, $password){
     $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
-    $results = $pdo->prepare('SELECT * FROM Categories ORDER BY RAND() LIMIT 2');
+    $results = $pdo->prepare('SELECT * FROM categories ORDER BY RAND() LIMIT 2');
     $results->execute();
     $categories = $results->fetchAll(PDO::FETCH_ASSOC);
     return $categories;
