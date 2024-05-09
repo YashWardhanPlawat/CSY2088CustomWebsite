@@ -17,6 +17,36 @@ function showlast10Products($username, $password){
     return $fetchR;
 }
 
+function showRandomProducts($username, $password){
+    try {
+        // Attempt to establish a PDO connection
+        $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
+
+        // Prepare and execute the SQL query
+        $results = $pdo->prepare('SELECT * FROM Products ORDER BY RAND() LIMIT 3');
+        $results->execute();
+
+        // Fetch all products
+        $products = $results->fetchAll(PDO::FETCH_ASSOC);
+
+        // Return the fetched products
+        return $products;
+    } catch (PDOException $e) {
+        // Handle any errors that occurred during the process
+        echo "Connection failed: ". $e->getMessage();
+        return null;
+    }
+}
+
+function showRandomCategories($username, $password){
+    $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
+    $results = $pdo->prepare('SELECT * FROM Categories ORDER BY RAND() LIMIT 2');
+    $results->execute();
+    $categories = $results->fetchAll(PDO::FETCH_ASSOC);
+    return $categories;
+
+}
+
 function checkForAdminAcc($Name, $username, $password){
     $pdo = new PDO('mysql:dbname=csy2088;host=mysql', $username, $password);
     $results = $pdo->prepare('SELECT * FROM admin_accounts WHERE Name = :name');
@@ -108,4 +138,5 @@ function getProductDetails(){
     $results=$pdo->query('SELECT * FROM csy2088.products');
     return $results->fetchAll(PDO::FETCH_ASSOC);
 }
+
 ?>

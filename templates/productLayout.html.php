@@ -25,7 +25,7 @@
                 </div>
                 <div class="stars"></div>
                 <div class="reviews">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere distinctio obcaecati ex id eaque nihil commodi quaerat accusantium laborum? Aliquid ad eum doloribus ut laboriosam tempora aut natus facere provident.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere distinctio obcaecati ex id eaque nihil commodi quaerat accusantium laborum? </p>
                 </div>
             </div>
         </div>
