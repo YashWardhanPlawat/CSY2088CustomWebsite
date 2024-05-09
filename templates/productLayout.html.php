@@ -6,7 +6,7 @@
             </div>
             <div class="priceDesc">
                 <div class ="price">
-                    <p>£<?=$product['Price']?></p>
+                    <p>Price: £<?=$product['Price']?></p>
                 </div>
                 <div class="productDesc">
                     <h3><?=$product['Name']?></h3>
