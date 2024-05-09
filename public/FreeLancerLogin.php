@@ -10,8 +10,8 @@
     $Title = basename(__FILE__, '.php');
     //this changes the name of the tab to this current file's name
 
-    if (isset($_POST[''])){
-        $adminLogInQuery = 'SELECT * FROM _accounts WHERE Name = :name';
+    if (isset($_POST['FreelancerLogin'])){
+        $adminLogInQuery = 'SELECT * FROM freelancer_accounts WHERE Name = :name';
         $adminLogInQueryValues = ['name' => htmlspecialchars($_POST['username'])];
         $pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
         //Query the admin accounts database for the name the form gave use
@@ -24,17 +24,17 @@
             if(sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf) == $account['Password']){
                 //if the entered password is equal to the password associated to the account on the database set the SESSION value
                 $_SESSION['currentAccount'] = $account['Name'];
-                header('Location: ../.php');
+                header('Location: ../FreeLancerPortfo.php');
                 //loged in page
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
                 $adminLoginMessage = 'failed to login';
-                $mainContent = '../templates/.html.php';
+                $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
             }
         }else{
             //this retures a "failed to login" because a account under that name dosen't exist
             $adminLoginMessage = 'failed to login';
-            $mainContent = '../templates/.html.php';
+            $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
         }
     }
     
@@ -42,7 +42,7 @@
     require "../templates/nonMain/Header.html.php";
 
     if (!isset($mainContent)){
-        require '../templates/.html.php';
+        require '../templates/tem-FreeLancerLoginForm.html.php';
     }else{
         require $mainContent;
     }
