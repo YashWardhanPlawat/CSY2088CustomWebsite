@@ -4,188 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../public/main.css">
+
   <title>Freelancer Profile</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background-color: #0000ff;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      height: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-    .logo {
-      float: left;
-    }
-    .header-right {
-      float: right;
-    }
-    .header-right a {
-      color: white;
-      text-decoration: none;
-      padding: 10px;
-    }
-    .box {
-      background: #f0f0f0;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      background: #ccc;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    .specialization {
-      width: calc(100px - 40px); /* width of profile pic box - padding */
-      background: #f0f0f0;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-    .name-box {
-      width: calc(80% - 40px); /* width of container - padding */
-      background: #f0f0f0;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-    .contact-details {
-      background: #ccc;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .work-images {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .work-image {
-      width: calc(20% - 10px); /* 20% of container width minus margin */
-      height: 100px;
-      background: #ccc;
-      border-radius: 5px;
-    }
-    .work-history,
-    .info {
-      width: calc(50% - 10px); /* 50% of container width minus margin */
-      background: #f0f0f0;
-      padding: 20px;
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-    .comments {
-      background: #f0f0f0;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    .footer{
-	background-color: #24262b;
-    padding: 70px 0;
-}
-.footer-col{
-  display: inline-block;
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	  position: relative;
-  font-size: 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 30px; /* Adjusted from 35px to 30px */
-  font-weight: 500;
-  margin-top: -5px; /* Added to bring headers up by 5px */
-
-}
-.footer-col ul {
-  list-style: none; /* Hide bullet points */
-  padding-left: 0; /* Remove default padding */
-}
-
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.availability {
-      background: #f0f0f0;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-    .availability li {
-      display: inline-block;
-      padding: 5px 10px;
-      border: 1px solid green;
-      margin-right: 5px;
-    }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
-
-  </style>
 </head>
 
 <body>
-	<!--
   <header>
     <div class="headDark">
         <ul class="iconWords">
@@ -209,12 +34,14 @@
             </li>
         </ul>
     </div>
-  </header>
-  
+</header>
 
   <div class="container">
     <div class="box">
       <div class="profile-pic"></div>
+      <div class="freelancerlogo">
+        <img src="../images/logo.png" alt="" />
+    </div>
       <div class="name-box">
         <h1>Jhon</h1>
         <div class="contact-details">📞 (000) 244-199127</div>
@@ -299,7 +126,6 @@
 	</div>
 	</div>
 
-	<!--
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
@@ -343,7 +169,6 @@
 			</div>
 		</div>
 	</footer>
--->
 </body>
 
 </html>
