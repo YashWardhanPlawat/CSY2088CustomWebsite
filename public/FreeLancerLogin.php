@@ -28,12 +28,12 @@
                 //loged in page
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
-                $adminLoginMessage = 'failed to login';
+                $FreeLancerLoginMessage = 'failed to login';
                 $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
             }
         }else{
             //this retures a "failed to login" because a account under that name dosen't exist
-            $adminLoginMessage = 'failed to login';
+            $FreeLancerLoginMessage = 'failed to login';
             $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
         }
     }
