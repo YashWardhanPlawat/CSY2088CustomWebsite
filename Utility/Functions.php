@@ -76,7 +76,7 @@ function userLockOut(){
             //this check if currentAccountName is set eg a account has been log in to
                 if (!checkForAdminAcc($_SESSION['currentAccount'], 'csy2088', 'csy2088')){
                     //this checks if the current SESSION username is not in the admin database if it isn't they have already log in
-                    header("Location: ../templates/AdminLogin.php");
+                    header("Location: ../AdminLogin.php");
                     //needs redirects to admin login page
                 }
             }else{

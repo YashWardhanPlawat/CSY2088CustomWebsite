@@ -29,22 +29,17 @@
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
                 $adminLoginMessage = 'failed to login';
-                $mainContent = '../templates/AdminLoginForm.html.php';
             }
         }else{
             //this retures a "failed to login" because a account under that name dosen't exist
             $adminLoginMessage = 'failed to login';
-            $mainContent = '../templates/AdminLoginForm.html.php';
         }
     }
     
     require "../templates/nonMain/Head.html.php";
     require "../templates/nonMain/Header.html.php";
 
-    if (!isset($mainContent)){
-        require '../templates/AdminLoginForm.html.php';
-    }else{
-        require $mainContent;
-    }
+    require '../templates/AdminLoginForm.html.php';
+
     require "../templates/nonMain/Footer.html";
 ?>
