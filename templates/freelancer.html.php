@@ -1,14 +1,12 @@
 <main>
-  <div class="container">
+  <div class="freelancer_container">
     <div class="box">
       <div class="profile-pic"></div>
-      <div class="freelancerlogo">
-        <img src="../images/logo.png" alt="" />
-    </div>
-      <div class="name-box">
-        <h1>Jhon</h1>
-        <div class="contact-details">📞 (000) 244-199127</div>
+	  <div class="name-box">
+        <h1><?=$account['Name']?></h1>
+        <div class="contact-details"><?=$account['Phone_number']?></div>
       </div>
+    </div>
       <div class="specialization">
         <h2>Specialization</h2>
         <p>Man Fashion Advisor</p>

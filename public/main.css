@@ -73,7 +73,7 @@ header {
   padding: 10px 10px;
 }
 
-.container {
+.freelancer_container {
   width: 99%;
   margin: 20px auto;
 }
@@ -299,12 +299,19 @@ footer {
   border-radius: 5px;
 }
 .name-box {
-  width: calc(25% - 90px); /* width of container - padding */
+  width: 80%; /* width of container - padding */
   background: #f0f0f0;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
+  float: right;
 }
+
+.name-box h1{
+  font-size: 50px;
+  text-align: left;
+}
+
 .contact-details {
   background: #ccc;
   padding: 10px;

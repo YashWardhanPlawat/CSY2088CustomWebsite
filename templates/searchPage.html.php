@@ -7,10 +7,10 @@ $productData = queryMysqlDatabase($pdo, $productQuery, null)->fetchAll(PDO::FETC
 <main class="product-list">
 <?php foreach ($productData as $product) { ?>
     <div class="searchproduct">
-    <img src="../images/<?=$product['Name']?>.png" class="image-placeholder" alt="<?$product['Name']?>">
-    <h3><?$product['Name']?></h3>
-    <p><? $product['Category'] | $product['Provider']?></p>
-    <p><?$product['Price']?></p>
+    <img src="../images/<?=$product['Name']?>.png" class="image-placeholder" alt="<?=$product['Name']?>">
+    <h3><?=$product['Name']?></h3>
+    <p><?=$product['Category']?> | <?=$product['Provider']?></p>
+    <p><?=$product['Price']?></p>
     </div>
 <?php } ?>
 </main>
