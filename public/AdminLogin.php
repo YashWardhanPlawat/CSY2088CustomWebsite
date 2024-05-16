@@ -23,7 +23,7 @@
             $usernameSecondHalf = substr($account['Name'], $usernameMidPoint);
             if(sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf) == $account['Password']){
                 //if the entered password is equal to the password associated to the account on the database set the SESSION value
-                $_SESSION['currentAccount'] = $account['Name'];
+                $_SESSION['currentAccountAdmin'] = $account['Name'];
                 header('Location: ../AdminInPage.php');
                 //loged in page
             }else{

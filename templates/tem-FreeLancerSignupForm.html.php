@@ -1,6 +1,6 @@
 <Main>
-    <?php if (isset()){?>
-        <h2><?=?></h2>
+    <?php if (isset($addFreelancerAccountMessage)){?>
+        <h2><?=$addFreelancerAccountMessage?></h2>
     <?php }?>
     <h2>freelancer sign in page</h2>
     <form action="FreeLancerSignup.php" method="post">
