@@ -72,9 +72,9 @@ function userLockOut(){
     try{
         if(session_status() == 2){
         //this check if a session is active
-            if (isset($_SESSION['currentAccount'])){
+            if (isset($_SESSION['currentAccountAdmin'])){
             //this check if currentAccountName is set eg a account has been log in to
-                if (!checkForAdminAcc($_SESSION['currentAccount'], 'csy2088', 'csy2088')){
+                if (!checkForAdminAcc($_SESSION['currentAccountAdmin'], 'csy2088', 'csy2088')){
                     //this checks if the current SESSION username is not in the admin database if it isn't they have already log in
                     header("Location: ../AdminLogin.php");
                     //needs redirects to admin login page
