@@ -40,7 +40,7 @@ if ($categories != null){
 	<?php }
 }
 ?>
-
+<!--
       <div class="category">
         <h2>│ Category │</h2>
         <div class="category-image2">
@@ -57,5 +57,5 @@ if ($categories != null){
         </div>
       </div>
     </div>
-
+-->
 </main>

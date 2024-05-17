@@ -5,21 +5,21 @@
     <div class="headDark">
         <ul class="iconWords">
             <li class="iconWords">
-                <a class="iconWords" href="">Help│</a>
-                <a class="iconWords" href="../CustomerLogin.php">Sign in│</a>
-                <a class="iconWords" href="../CustomerSignup.php">Sign up│</a>
-                <a class="iconWords" href="../FreeLancerLogin.php">Sign in as freelancer|</a>
-                <a class="iconWords" href="../FreeLancerSignup.php">Become a freelancer|</a>
-                <a class="iconWords" href="../AdminLogin.php">emplory Sign in</a>
+                <a class="iconWords" href="">Help │</a>
+                <a class="iconWords" href="../CustomerLogin.php"> Sign in │</a>
+                <a class="iconWords" href="../CustomerSignup.php"> Sign up │</a>
+                <a class="iconWords" href="../FreeLancerLogin.php"> Sign in as freelancer |</a>
+                <a class="iconWords" href="../FreeLancerSignup.php"> Become a freelancer |</a>
+                <a class="iconWords" href="../AdminLogin.php"> emplory Sign in </a>
             </li>
         </ul>
     </div>
     <div class="headlight">
         <ul>
             <li>
-                <a href="../Index.php">HomePage</a>
-                <a href="../searchpage.php?ProductORFree=products">Product search</a>
-                <a href="../searchpage.php?ProductORFree=freelancer_accounts">Freelancer search</a>                  
+                <a href="../Index.php">Home Page |</a>
+                <a href="../searchpage.php?ProductORFree=products"> Product search |</a>
+                <a href="../searchpage.php?ProductORFree=freelancer_accounts"> Freelancer search </a>                  
             <?php
             if (session_status() == 2){
                 if (isset($_SESSION['currentAccountAdmin'])){
