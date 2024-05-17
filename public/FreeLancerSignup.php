@@ -21,7 +21,7 @@
                 $usernameSecondHalf = substr($_POST['username'], $usernameMidPoint);
                 $hiddenPassword = sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf);
                 
-                $addFreelancerQuery = 'INSERT INTO _accounts (Name, Password, Email) VALUES (:Name, :Password, :Email)';
+                $addFreelancerQuery = 'INSERT INTO freelancer_accounts (Name, Password, Email) VALUES (:Name, :Password, :Email)';
                 $addFreelancerQueryValues = [ 'Name' => htmlspecialchars($_POST['username']),
                                      'Password' => $hiddenPassword,
                                      'Email' => htmlspecialchars($_POST['email']) ];

@@ -18,8 +18,8 @@
         <ul>
             <li>
                 <a href="../Index.php">HomePage</a>
-                <a href="../searchpage.php">Product search</a>
-                <a href="">Freelancer search</a>                  
+                <a href="../searchpage.php?ProductORFree=products">Product search</a>
+                <a href="../searchpage.php?ProductORFree=freelancer_accounts">Freelancer search</a>                  
             <?php
             if (session_status() == 2){
                 if (isset($_SESSION['currentAccountAdmin'])){
