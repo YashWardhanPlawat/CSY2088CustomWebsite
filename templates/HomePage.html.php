@@ -40,22 +40,6 @@ if ($categories != null){
 	<?php }
 }
 ?>
-<!--
-      <div class="category">
-        <h2>│ Category │</h2>
-        <div class="category-image2">
-          <img src="../images/placeholder-5.png" alt="Placeholder Image" />
-        </div>
-        <div class="category-image2">
-          <img src="../images/placeholder-6.png" alt="Placeholder Image" />
-        </div>
-        <div class="category-image2">
-          <img src="../images/placeholder-7.png" alt="Placeholder Image" />
-        </div>
-        <div class="category-image2">
-          <img src="../images/placeholder-8.png" alt="Placeholder Image" />
-        </div>
-      </div>
-    </div>
--->
+
+
 </main>
