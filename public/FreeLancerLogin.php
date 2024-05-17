@@ -23,17 +23,17 @@
             $usernameSecondHalf = substr($account['Name'], $usernameMidPoint);
             if(sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf) == $account['Password']){
                 //if the entered password is equal to the password associated to the account on the database set the SESSION value
-                $_SESSION['currentAccount'] = $account['Name'];
+                $_SESSION['currentAccountFreeLancer'] = $account['Name'];
                 header('Location: ../FreeLancerPortfo.php');
                 //loged in page
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
-                $adminLoginMessage = 'failed to login';
+                $FreeLancerLoginMessage = 'failed to login';
                 $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
             }
         }else{
             //this retures a "failed to login" because a account under that name dosen't exist
-            $adminLoginMessage = 'failed to login';
+            $FreeLancerLoginMessage = 'failed to login';
             $mainContent = '../templates/tem-FreeLancerLoginForm.html.php';
         }
     }

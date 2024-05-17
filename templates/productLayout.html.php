@@ -19,6 +19,7 @@
             </div>
             <div class="imagesReviews">
                 <div class="extraImages">
+                    <?<img src="../images/'.$product['Name']. '.png" '.' alt="'. $product['Name']. '" class="image-size" />?>
                     <img src="../images/placeholder-6.png" alt="Placeholder Image"  width = "100" height = "100"/>
                     <img src="../images/productpage2.png" alt="Placeholder Image"  width = "100" height = "100" />
                     <img src="../images/productpage3.png" alt="Placeholder Image"   width = "100" height = "100"/>

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+<main>
 <body>
     <div class="login-container">
         <h1>Login</h1>
+        <div class="dropdown">
+            <div class="dropbtn-container">
+              <input class="dropbtn" type="text" readonly placeholder="Login as?">
+              <div class="arrow-down"></div>
+            </div>
+            <div class="dropdown-content">
+              <a href="#">Admin</a>
+              <a href="#">User</a>
+              <a href="#">freelancer</a>
+            </div>
+          </div>
+        
+        
         <form action="#" method="post">
             <input type="text" name="username" placeholder="Username">
             <div class="password-toggle">
@@ -20,10 +26,6 @@
             
             <input type="submit" value="Login">
         </form>
-        <div class="login-options">
-            <a href="#">Login with Google</a>
-            <a href="#">Login with Microsoft</a>
-        </div>
     </div>
 
     <script>
@@ -44,4 +46,4 @@
         });
     </script>
 </body>
-</html>
+</main>

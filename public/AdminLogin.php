@@ -23,28 +23,23 @@
             $usernameSecondHalf = substr($account['Name'], $usernameMidPoint);
             if(sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf) == $account['Password']){
                 //if the entered password is equal to the password associated to the account on the database set the SESSION value
-                $_SESSION['currentAccount'] = $account['Name'];
+                $_SESSION['currentAccountAdmin'] = $account['Name'];
                 header('Location: ../AdminInPage.php');
                 //loged in page
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
                 $adminLoginMessage = 'failed to login';
-                $mainContent = '../templates/AdminLoginForm.html.php';
             }
         }else{
             //this retures a "failed to login" because a account under that name dosen't exist
             $adminLoginMessage = 'failed to login';
-            $mainContent = '../templates/AdminLoginForm.html.php';
         }
     }
     
     require "../templates/nonMain/Head.html.php";
     require "../templates/nonMain/Header.html.php";
 
-    if (!isset($mainContent)){
-        require '../templates/AdminLoginForm.html.php';
-    }else{
-        require $mainContent;
-    }
+    require '../templates/AdminLoginForm.html.php';
+
     require "../templates/nonMain/Footer.html";
 ?>
