@@ -8,10 +8,15 @@ if (session_status()!= 2) {
 $Title = basename(__FILE__, '.php');
 
 // Retrieve the product ID from the URL
-$productId = isset($_GET['id'])? $_GET['id'] : '';
+//$productId = isset($_GET['id'])? $_GET['id'] : '';
 
-// Fetch the product details based on the ID
-$productDetails = getProductDetailsByProductId($productId); // You need to implement this function
+
+//$productDetails = getProductDetailsByProductId($productId); // You need to implement this function
+$pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
+$productQuery = 'SELECT * FROM Products WHERE id = :id';
+$productQueryValues = ['id' => $_GET['ProductID']];
+
+$products = queryMysqlDatabase($pdo, $productQuery, $productQueryValues)->fetch();
 
 require "../templates/nonMain/Head.html.php";
 require "../templates/nonMain/Header.html.php";
