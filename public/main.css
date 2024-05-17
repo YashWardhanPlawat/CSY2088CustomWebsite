@@ -20,7 +20,7 @@
 .headlight {
   background-color: blue;
   width: 100vw;
-  height: 6vh;
+  height: 10vh;
 }
 
 .headlight a {
@@ -196,7 +196,7 @@ footer {
   text-transform: capitalize;
   margin-bottom: 30px;
   font-weight: 500;
-  margin-top: -5px;
+  margin-top: 10px;
 }
 
 .footer-col ul {
@@ -257,7 +257,16 @@ footer {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+.footer-container {
+  width: 99%;
+  margin: 20px auto;
+}
 
+.social-links img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  margin-right: 10px; /* Add spacing between icons if necessary */
+}
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
@@ -576,7 +585,7 @@ select {
   margin-left: 250px;
 }
 
-.productsearch {
+.searchproduct {
   border: 1px solid blue;
   padding: 10px;
   text-align: center;

@@ -10,11 +10,11 @@ $Title = basename(__FILE__, '.php');
 // Retrieve the product ID from the URL
 //$productId = isset($_GET['id'])? $_GET['id'] : '';
 
+$productId = isset($_GET['id']) ? $_GET['id'] : '';
 
-//$productDetails = getProductDetailsByProductId($productId); // You need to implement this function
-$pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
-$productQuery = 'SELECT * FROM products WHERE id = :id';
-$productQueryValues = ['id' => $_GET['ProductID']];
+$pdo = setMysqlDatabase('csy2088', 'csy2088', 'csy2088');
+$productQuery = 'SELECT * FROM products WHERE ID = :ID';
+$productQueryValues = ['ID' => $productId];
 
 $products = queryMysqlDatabase($pdo, $productQuery, $productQueryValues)->fetch();
 
