@@ -13,7 +13,7 @@ $Title = basename(__FILE__, '.php');
 
 //$productDetails = getProductDetailsByProductId($productId); // You need to implement this function
 $pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
-$productQuery = 'SELECT * FROM Products WHERE id = :id';
+$productQuery = 'SELECT * FROM products WHERE id = :id';
 $productQueryValues = ['id' => $_GET['ProductID']];
 
 $products = queryMysqlDatabase($pdo, $productQuery, $productQueryValues)->fetch();
