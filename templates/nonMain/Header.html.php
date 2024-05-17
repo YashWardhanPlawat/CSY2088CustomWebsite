@@ -1,4 +1,7 @@
 <header>
+    <div class="logo">
+        <img src="../images/logo.png" alt="" />
+    </div>
     <div class="headDark">
         <ul class="iconWords">
             <li class="iconWords">
@@ -10,9 +13,6 @@
                 <a class="iconWords" href="../AdminLogin.php">emplory Sign in</a>
             </li>
         </ul>
-    </div>
-    <div class="logo">
-        <img src="../images/logo.png" alt="" />
     </div>
     <div class="headlight">
         <ul>
