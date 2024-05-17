@@ -461,7 +461,6 @@ input[type="text"],
 /*search page*/
 .container {
   display: flex;
-  min-height: 100vh;
 /*  position: relative;*/
   overflow-x: hidden;
 }
@@ -535,7 +534,7 @@ select {
   margin-left: 250px;
 }
 
-.productsearch {
+.searchproduct {
   border: 1px solid blue;
   padding: 10px;
   text-align: center;

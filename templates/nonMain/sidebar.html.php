@@ -6,50 +6,55 @@
     </button>
     <aside class="filters">
         <div class="filter-group">
-            <label for="brand">Brand</label>
-            <select id="brand">
+            <label for="brand1">Brand</label>
+            <select id="brand1">
+                <option>Nike</option>
+                <option>Addidas</option>
+                <option>The North Face</option>
+                <option>Hoodrich</option>
+                <option>Under Armour</option>
+
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="brand2">Price</label>
+            <select id="brand2">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Price</label>
-            <select id="brand">
+            <label for="brand3">Sale&Offers</label>
+            <select id="brand3">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Sale&Offers</label>
-            <select id="brand">
+            <label for="brand4">Gender</label>
+            <select id="brand4">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Gender</label>
-            <select id="brand">
+            <label for="brand5">Kids</label>
+            <select id="brand5">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Kids</label>
-            <select id="brand">
+            <label for="brand6">Colour</label>
+            <select id="brand6">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Colour</label>
-            <select id="brand">
+            <label for="brand7">Fit</label>
+            <select id="brand7">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
         <div class="filter-group">
-            <label for="brand">Fit</label>
-            <select id="brand">
-                <option value="brand1">Brand 1</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label for="brand">Sports</label>
-            <select id="brand">
+            <label for="brand8">Sports</label>
+            <select id="brand8">
                 <option value="brand1">Brand 1</option>
             </select>
         </div>
