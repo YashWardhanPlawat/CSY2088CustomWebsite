@@ -131,6 +131,14 @@ function loadHeader($headerFilePath){
     $contents = ob_get_clean();
     return $contents;
 }
+function getProductDetailsByProductId($productId) {
+    global $pdo;
+    $sql = "SELECT * FROM csy2088.products WHERE ID =?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$productId]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
 
 // this gets product details from the databse
 function getProductDetails(){
