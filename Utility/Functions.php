@@ -133,7 +133,7 @@ function loadHeader($headerFilePath){
 }
 function getProductDetailsByProductId($productId) {
     global $pdo;
-    $sql = "SELECT * FROM csy2088.products WHERE ID =?";
+    $sql = "SELECT * FROM products WHERE ID =?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$productId]);
     return $stmt->fetch(PDO::FETCH_ASSOC);

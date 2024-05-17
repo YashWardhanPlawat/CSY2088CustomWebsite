@@ -15,14 +15,14 @@
     if(isset($_GET["ProductORFree"])) {
         if ($_GET["ProductORFree"] == "freelancer_accounts"){
             $query = "SELECT * FROM freelancer_accounts";
-            $productData = queryMysqlDatabase($pdo, $query, null)->fetch();
+            $productData = queryMysqlDatabase($pdo, $query, null)->fetchAll(PDO::FETCH_ASSOC);
         }elseif ($_GET["ProductORFree"] == "products") {
             $query = "SELECT * FROM products";
-            $productData = queryMysqlDatabase($pdo, $query, null)->fetch();
+            $productData = queryMysqlDatabase($pdo, $query, null)->fetchAll(PDO::FETCH_ASSOC);
         }
     }else {
         $query = "SELECT * FROM freelancer_accounts";
-        $productData = queryMysqlDatabase($pdo, $query, NULL)->fetch();
+        $productData = queryMysqlDatabase($pdo, $query, NULL)->fetchAll(PDO::FETCH_ASSOC);
     }
     
     require "../templates/nonMain/Head.html.php";

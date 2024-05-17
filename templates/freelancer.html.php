@@ -15,15 +15,15 @@
     <div class="availability">
       <h2>Availability</h2>
       <ul>
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
+        <li class="<?php if ($account['WorkMo']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Mo</li>
+        <li class="<?php if ($account['WorkTu']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Tu</li>
+        <li class="<?php if ($account['WorkWe']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >We</li>
+        <li class="<?php if ($account['WorkTh']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Th</li>
+        <li class="<?php if ($account['WorkFr']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Fr</li>
       </ul>
       <ul>
-        <li>Sa</li>
-        <li>Su</li>
+        <li class="<?php if ($account['WorkSa']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Sa</li>
+        <li class="<?php if ($account['WorkSu']== 0){echo "availability_R";}else{echo "availability_G";} ?>" >Su</li>
       </ul>
     </div>
   </div>
@@ -67,10 +67,7 @@
 		</div>
 		<div class="info">
 			<h2>Information</h2>
-			<p>
-				Detailed information about the freelancer's skills, experiences, and
-				other relevant details.
-			</p>
+			<p><?=$account['Description']?></p>
 		</div>
 	</div>
 
