@@ -223,6 +223,7 @@ footer {
     width: 100%;
   }
 }
+/*productpage*/
 
 .productContainer {
   display: grid;
@@ -255,7 +256,7 @@ footer {
 .priceDesc {
   grid-area: priceDesc;
   /*justify-self: left;*/
-  width: 50%;
+  width: 100%;
 }
 
 .imagesReviews {
@@ -273,11 +274,11 @@ footer {
   background-color: #bebebe;
 }
 
-	/*@@ -369,207 +301,3 @@ select {*/
+	
 .product-info p {
   margin: 5px 0;
 }
-
+/*loginpage*/
 .box {
   background: #f0f0f0;
   padding: 20px;
@@ -450,24 +451,24 @@ input[type="text"],
     display: block;
   }
 
-/*---*/
+/*search page*/
 .container {
   display: flex;
   min-height: 100vh;
-  position: relative;
-  overflow-y: auto;
+/*  position: relative;*/
+  overflow-x: hidden;
 }
 .hamburger {
   display: block;
   position: absolute;
-  top: 25px;
+  top: 110px;
   left: 5px;
   z-index: 3; /* Ensures the icon is on top */
   cursor: pointer;
   background: transparent;
   border: none;
-  padding: 0;
-  outline: none;
+ /* padding: 0;
+  outline: none;*/
 }
 .hamburger div {
   width: 30px;
@@ -476,17 +477,16 @@ input[type="text"],
   margin: 5px 0;
   transition: 0.4s;
 }
-.hamburger.active div:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.hamburger.active div:nth-child(1),
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg); /* Correct rotation */
 }
+
 
 .hamburger.active div:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active div:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
 
 
 
@@ -494,25 +494,26 @@ input[type="text"],
   width: 250px;
   padding: 20px;
   position: fixed;
-  left: -300px; /* Start off-screen */
-  top: 105px;
-  height: 100%;
+  left: 0; /* Start off-screen */
+  top: 150px;
+  height: 100vh;
   background-color: white;
   box-shadow: 2px 0 5px rgba(0,0,0,0.5);
   transition: left 0.3s ease;
+  transform: translateX(-100%);
 }
 .filters.open {
-  left: 0px; 
+  transform: translateX(0); /* Slide in */
 }
 
 
-label {
-  display: block;
+label,select {
+  width: 100%;
   margin-bottom: 5px;
 }
 
 select {
-  width: 100%;
+ /* width: 100%;*/
   padding: 8px;
   border: 1px solid blue;
   border-radius: 4px;
@@ -524,11 +525,12 @@ select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-left: 20px;
+  margin-left: 250px;
 }
 
 .productsearch {
   border: 1px solid blue;
+  padding: 10px;
   text-align: center;
 }
 
