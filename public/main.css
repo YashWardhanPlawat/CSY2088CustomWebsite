@@ -24,11 +24,13 @@
 }
 
 .headlight a {
-  color: black;
+  color:  #000000;
   text-decoration: none;
   display: fixed;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  padding-right: 130px;
 }
 
 .logo img {
@@ -79,56 +81,83 @@ header {
 }
 
 h1 {
-  font-size: 50px;
-  display: fixed;
-  justify-content: flex-end;
+  font-size: 55px;
   text-align: center;
+  padding-right: 100px;
+
+}
+.container {
+  /*display: flex;*/
+  min-height: 100vh;
+/*  position: relative;*/
+ /* overflow-x: hidden;*/
 }
 
 p {
-  font-size: large;
-  display: fixed;
-  justify-content: flex-end;
+  font-size: 15px;
   text-align: center;
 }
-
 .product-row {
-  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 190px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  padding:30px
 }
-
 .product {
-  float: left;
-  width: 19%;
-  margin: 2%;
-  margin-left: 7%;
-  margin-right: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid blue;
-  padding: 0px;
+  padding: 10px;
+  width: 300px; 
+  height: 400px; 
   box-sizing: border-box;
 }
 
 .image-size {
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: none;
 }
 
 .category {
-  overflow: auto;
+  margin-bottom: 40px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
 }
 
-.category-image,
-.category-image2 {
-  float: left;
-  width: 21%;
-  margin: 2%;
+.category-image {
   border: 1px solid blue;
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
   box-sizing: border-box;
+  margin: 10px;
+  width: 15%; /* Adjusting width for three images in a row */
 }
 
 .category-image img {
   width: 100%;
+  height: auto;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-image {
+    width: calc(50% - 40px); /* Two images in a row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-image {
+    width: calc(100% - 40px); /* One image in a row for mobile */
+  }
+}
+
 /*footer*/
 
 footer {
@@ -469,11 +498,7 @@ input[type="text"],
   }
 
 /*search page*/
-.container {
-  display: flex;
-/*  position: relative;*/
-  overflow-x: hidden;
-}
+
 .hamburger {
   display: block;
   position: absolute;

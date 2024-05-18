@@ -29,8 +29,8 @@ if ($categories != null){
 	foreach($categories as $category){ 
 	$productQueryData = ['Category' => $category['categories'] ];
     $productData = queryMysqlDatabase($pdo, $productQuery, $productQueryData)->fetchAll(PDO::FETCH_ASSOC);?>
-	<div class="category">
-		<h2> | <?=$category['categories']?> |</h2>
+	<h2> | <?=$category['categories']?> |</h2>
+  <div class="category">
 		<?php foreach($productData as $product){ ?>
 		<div class="category-image">
 			<a href="ProductPage.php?<?=$product['Name']?>"><img src="../images/<?=$product['Name']?>.png" alt="<?=$product['Name']?>" class="image-size"/></a>
@@ -41,5 +41,6 @@ if ($categories != null){
 }
 ?>
 
+    
 
 </main>
