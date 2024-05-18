@@ -1,7 +1,7 @@
 <main>
   <div class="freelancer_container">
     <div class="box">
-      <div class="profile-pic"></div>
+	  <img class="profile-pic" src="../images/0_<?=$account["ID"]?>.png" alt="profile Image">
 	  <div class="name-box">
         <h1><?=$account['Name']?></h1>
         <div class="contact-details"><?=$account['Phone_number']?></div>

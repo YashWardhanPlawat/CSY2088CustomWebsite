@@ -14,7 +14,7 @@
         $adminLogInQuery = 'SELECT * FROM freelancer_accounts WHERE Name = :name';
         $adminLogInQueryValues = ['name' => htmlspecialchars($_POST['username'])];
         $pdo = setMysqlDatabase('csy2088','csy2088','csy2088');
-        //Query the admin accounts database for the name the form gave use
+        //Query the accounts database for the name the form gave use
         $account = queryMysqlDatabase($pdo, $adminLogInQuery, $adminLogInQueryValues)->fetch();
         if($account){
             //if database has a entry under that name, continue
@@ -24,7 +24,7 @@
             if(sha1($usernameFirstHalf . htmlspecialchars($_POST['password']) . $usernameSecondHalf) == $account['Password']){
                 //if the entered password is equal to the password associated to the account on the database set the SESSION value
                 $_SESSION['currentAccountFreeLancer'] = $account['Name'];
-                header('Location: ../FreeLancerPortfo.php');
+                header('Location: ../FreeLancerPortfo.php?FreeLancerID='.$account['ID']);
                 //loged in page
             }else{
                 //this retures a "failed to login" because the password with the entered account name dont match
