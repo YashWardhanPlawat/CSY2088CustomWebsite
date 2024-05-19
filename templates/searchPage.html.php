@@ -5,7 +5,7 @@ if (isset($_GET["ProductORFree"])) {
         foreach ($productData as $product) {?>
             <div class="searchproduct">
                 <a href="FreeLancerPortfo.php?FreeLancerID=<?=$product['ID']?>">
-                    <img src="../images/<?=$product['Name']?>.png" class="image-placeholder" alt="">
+                    <img src="../images/0_<?=$product['ID']?>.png" class="image-placeholder" alt="">
                     <h3><?=$product['Name']?></h3>
                     <p><?=$product['Email']?></p>
                 </a>

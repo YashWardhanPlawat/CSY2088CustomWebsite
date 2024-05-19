@@ -8,8 +8,12 @@
                 <a class="iconWords" href="">Help │</a>
                 <a class="iconWords" href="../CustomerLogin.php"> Sign in │</a>
                 <a class="iconWords" href="../CustomerSignup.php"> Sign up │</a>
-                <a class="iconWords" href="../FreeLancerLogin.php"> Sign in as freelancer |</a>
-                <a class="iconWords" href="../FreeLancerSignup.php"> Become a freelancer |</a>
+                <?php if(isset($_SESSION["currentAccountFreeLancer"])){ ?>
+                    <a class="iconWords" href=""> hello <?=$_SESSION["currentAccountFreeLancer"]?> |</a>
+                <?php }else{ ?>
+                    <a class="iconWords" href="../FreeLancerLogin.php"> Sign in as freelancer |</a>
+                    <a class="iconWords" href="../FreeLancerSignup.php"> Become a freelancer |</a>
+                <?php } ?>
                 <a class="iconWords" href="../AdminLogin.php"> emplory Sign in </a>
             </li>
         </ul>
