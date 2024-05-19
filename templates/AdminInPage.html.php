@@ -20,6 +20,8 @@
             <label for="provider">Provider:</label>
             <input type="text" id="provider" name="provider" required>
             <br>
+            <label for="image">Product Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
             <button type="submit" name="addProduct">Add Product</button>
         </form>
     </section>

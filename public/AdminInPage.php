@@ -17,6 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category = $_POST['category'];
         $description = $_POST['description'];
         $provider = $_POST['provider'];
+        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+            $imageFileName = basename($_FILES['image']['name']);
+            $imageFilePath = '../images/' . $imageFileName;
+            move_uploaded_file($_FILES['image']['tmp_name'], $imageFilePath);
+        }
 
         $query = 'INSERT INTO products (Name, Price, Category, Description, Provider) VALUES (:name, :price, :category, :description, :provider)';
         $params = [
